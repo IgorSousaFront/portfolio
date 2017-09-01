@@ -96,6 +96,7 @@
 			.fa {
 				color: $color-light;
 				font-size: 30px;
+				cursor: pointer;
 				animation-duration: 2s;
 				animation-name: bounce;
 				animation-iteration-count: infinite;
@@ -146,32 +147,36 @@
 		.portfolio-item {
 			position: relative;
 
-			img {
-				@include border-radius(5px);
+			figure {
+				position: relative;
 
-				margin-bottom: 10px;
-			}
+				img {
+					@include border-radius(5px);
 
-			.link-box {
-				@include border-radius(5px);
-				@include transform(scale(0));
-				@include transition(all ease .3s);
-				@include flexbox();
-				@include justify(center);
-				@include align(center);
+					margin-bottom: 10px;
+				}
 
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-color: rgba($color-primary, .8);
-				color: $color-light;
-				font-size: 30px;
-				text-decoration: none;
+				.link-box {
+					@include border-radius(5px);
+					@include transform(scale(0));
+					@include transition(all ease .3s);
+					@include flexbox();
+					@include justify(center);
+					@include align(center);
 
-				.fa {
-					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: rgba($color-primary, .8);
+					color: $color-light;
+					font-size: 30px;
+					text-decoration: none;
+
+					.fa {
+						display: block;
+					}
 				}
 			}
 

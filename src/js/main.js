@@ -5,7 +5,7 @@ var Banner = {
 			typeSpeed: 100,
 			loop: true,
 			showCursor: false,
-			backDelay: 2000
+			backDelay: 1000
 		});
 	},
 
