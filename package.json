@@ -23,6 +23,7 @@
     "gulp-file-include": "^0.13.7",
     "gulp-imagemin": "^3.3.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-image": "^2.6.0"
   }
 }

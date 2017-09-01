@@ -7,6 +7,16 @@ var Banner = {
 			showCursor: false,
 			backDelay: 2000
 		});
+	},
+
+	scroll: function () {
+		$(".arrow-down").click(function () {
+			var height = $('.section-banner').innerHeight();
+            $('html, body').animate({
+                scrollTop: height,
+                specialEasing: true
+            }, 500);
+		});
 	}
 };
 
@@ -24,10 +34,10 @@ var Portfolio = {
 					items:1
 				},
 				768:{
-					items:2
+					items:3
 				},
 				992:{
-					items:3
+					items:4
 				}
 			}
 		});
@@ -41,6 +51,7 @@ var App = {
 	    });
 
 		Banner.writing();
+		Banner.scroll();
 
 		Portfolio.carousel();
 	}

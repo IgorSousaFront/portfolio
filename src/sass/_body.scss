@@ -86,6 +86,34 @@
 				}
 			}
 		}
+
+		.arrow-down {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: 30px 0;
+
+			.fa {
+				color: $color-light;
+				font-size: 30px;
+				animation-duration: 2s;
+				animation-name: bounce;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-out;
+			}
+		}
+
+		@keyframes bounce {
+			from {
+				@include transform(translateY(0));
+				opacity: 0;
+			}
+
+			to {
+				@include transform(translateY(20px));
+				opacity: 1;
+			}
+		}
 	}
 
 	.section-skills {
@@ -120,6 +148,8 @@
 
 			img {
 				@include border-radius(5px);
+
+				margin-bottom: 10px;
 			}
 
 			.link-box {
@@ -143,6 +173,15 @@
 				.fa {
 					display: block;
 				}
+			}
+
+			p {
+				font-family: $font-primary;
+				color: $color-light;
+				font-size: 19px;
+				text-align: center;
+				width: 75%;
+				margin: 0 auto;
 			}
 
 			&:hover {

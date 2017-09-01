@@ -4,6 +4,7 @@ concat      = require('gulp-concat'),
 sourcemaps  = require('gulp-sourcemaps'),
 cleanCSS    = require('gulp-clean-css'),
 fileinclude = require('gulp-file-include'),
+image       = require('gulp-image');
 sync        = require('browser-sync');
 reload      = sync.reload;
 
@@ -45,6 +46,7 @@ gulp.task('fileinclude', function() {
 
 gulp.task('images', function() {
   gulp.src('src/img/*.*')
+  .pipe(image())
   .pipe(gulp.dest('./assets/images/'));
 });
 
