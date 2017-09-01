@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "authors": [
+    "Igor Sousa <igor@angulodigital.com.br>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "index.php",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "fontawesome#~4.7.0",
+    "jquery": "~2.2.3",
+    "owl.carousel": "^2.2.1",
+    "typed.js": "^1.1.4"
+  }
+}

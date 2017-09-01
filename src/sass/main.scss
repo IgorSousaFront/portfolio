@@ -1,0 +1,21 @@
+/*
+// External estyles
+*/
+@import "bootstrap";
+@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../../bower_components/owl.carousel/dist/assets/owl.theme.default.css";
+
+/*
+// Resets
+*/
+@import "variables";
+@import "mixins";
+@import "reset";
+
+/*
+// Sections
+*/
+@import "header";
+@import "body";
+@import "footer";

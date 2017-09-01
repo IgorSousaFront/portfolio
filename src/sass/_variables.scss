@@ -1,0 +1,18 @@
+/*
+// Variables
+*/
+
+// Cores gerais
+$color-primary       : #18587A;
+$color-primary-light : lighten($color-primary, 10%);
+$color-primary-dark  : darken($color-primary, 10%);
+$color-secondary     : #09A599;
+
+$color-dark          : #525252;
+$color-light         : #ffffff;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Open+Sans');
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;

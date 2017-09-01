@@ -1,0 +1,142 @@
+.main {
+
+	.section-banner {
+		@include flexbox();
+		@include justify(center);
+		@include align(center);
+
+		background-image: url('../images/banner-background.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 40%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100vh;
+		text-align: center;
+		width: 100%;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color-primary, .85);
+		}
+
+		.banner-img {
+			width: 120px;
+			height: 120px;
+			margin: 20px auto;
+
+			img {
+				@include border-radius(50%);
+
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		h1,
+		p {
+			color: $color-light;
+			font-family: $font-primary;
+			font-size: 40px;
+			text-shadow: 0 2px 3px $color-primary-dark;
+		}
+
+		p {
+			font-size: 20px;
+
+			span {
+				display: block;
+				height: 35px;
+			}
+
+			&:after {
+				content: ". . .";
+				display: block;
+			}
+		}
+
+		.list-socials {
+			list-style: none;
+			margin: 20px 0;
+
+			li {
+				display: inline-block;
+
+				a {
+					color: $color-light;
+					font-size: 20px;
+					margin: 0 10px;
+					text-shadow: 0 2px 3px $color-primary-dark;
+
+					.fa {
+						@extend .fa-fw;
+					}
+
+					&:hover {
+						color: $color-primary-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.section-skills {
+		padding: 60px 0;
+		margin-top: 100vh;
+		background-color: $color-light;
+		@include box-shadow(0 -1px 5px $color-primary-dark);
+
+		.skills-item {
+			text-align: center;
+			margin-bottom: 30px;
+
+			.fa {
+				font-size: 80px;
+				color: $color-primary;
+				margin-bottom: 30px;
+			}
+
+			p {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.section-portfolio {
+		height: 100vh;
+		padding: 60px;
+		background-color: $color-primary;
+
+		.portfolio-item {
+			@include border-radius(4px);
+
+			overflow: hidden;
+			background-color: $color-light;
+
+			figure {
+				position: relative;
+
+				&:before {
+					@include transform(scale(0));
+
+					content: "";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: rgba($color-primary, .4);
+				}
+			}
+		}
+	}
+}

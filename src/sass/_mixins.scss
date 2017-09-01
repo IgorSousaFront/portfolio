@@ -1,0 +1,122 @@
+/*
+//Mixins
+*/
+
+//Gradient
+@mixin gradient($first,$last,$percent-first,$percent-last){
+	background:-moz-linear-gradient(top,$last$percent-first,$first$percent-last);
+	background:-webkit-gradient(lefttop,leftbottom,color-stop($percent-first,$last),color-stop($percent-last,$first));
+	background:-webkit-linear-gradient(top,$last$percent-first,$first$percent-last);
+	background:-o-linear-gradient(top,$last$percent-first,$first$percent-last);
+	background:-ms-linear-gradient(top,$last$percent-first,$first$percent-last);
+	background:linear-gradient(tobottom,$last$percent-first,$first$percent-last);
+}
+
+//Transform
+@mixin transform($val){
+	-webkit-transform:$val;
+	-moz-transform:$val;
+	-ms-transform:$val;
+	transform:$val;
+}
+
+//transition
+@mixin transition($transition){
+	-moz-transition:$transition;
+	-o-transition:$transition;
+	-webkit-transition:$transition;
+	transition:$transition;
+}
+
+//selectappearance
+@mixin appearance($value){
+	-webkit-appearance:$value;
+	-moz-appearance:$value;
+	appearance:$value;
+}
+
+//Flexbox
+@mixin flexbox(){
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+}
+
+//Flexbox-inline
+@mixin inlineflexbox(){
+	display:-webkit-inline-box;
+	display:-moz-inline-box;
+	display:-ms-inline-flexbox;
+	display:-webkit-inline-flex;
+	display:inline-flex;
+}
+
+//Direction
+@mixin direction($direction){
+	@if$direction==column{
+		-webkit-flex-direction:vertical;
+		-moz-flex-direction:vertical;
+		-ms-flex-direction:column;
+		-webkit-flex-direction:column;
+		flex-direction:column;
+	}
+	@else{
+		-webkit-flex-direction:horizontal;
+		-moz-flex-direction:horizontal;
+		-ms-flex-direction:row;
+		-webkit-flex-direction:row;
+		flex-direction:row;
+	}
+}
+
+//Justify-content
+@mixin justify($justify){
+	-webkit-justify-content:$justify;
+	-ms-justify-content:$justify;
+	justify-content:$justify;
+}
+
+//Align-items
+@mixin align($align){
+	-webkit-align-items:$align;
+	-ms-align-items:$align;
+	align-items:$align;
+}
+
+//Box-shadow
+@mixin shadow($value){
+	-webkit-box-shadow:$value;
+	-moz-box-shadow:$value;
+	box-shadow:$value;
+}
+
+//Border-radius
+@mixin border-radius($radius){
+	border-radius:$radius;
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-ms-border-radius:$radius;
+	-o-border-radius:$radius;
+}
+
+//Filter
+@mixin filter($value){
+	-webkit-filter:$value;
+	-moz-filter:$value;
+	-ms-filter:$value;
+	-o-filter:$value;
+	filter:$value;
+}
+
+//hover effect
+@mixin hoverSocials($item) {
+	@for $i from 1 through 5 {
+		$delay: $i * .2s;
+
+		#{$item}:nth-child(#{$i}) {
+			animation-delay: $delay;
+		}
+	}
+}
