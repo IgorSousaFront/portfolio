@@ -121,45 +121,9 @@
 		}
 	}
 
-	.section-attr {
-		@include box-shadow(0 -1px 5px $color-primary-dark);
-
-		padding: 60px 0;
-		background-color: $color-light;
-
-		.about-box {
-			background-color: $color-primary-light;
-			border-left: 8px solid $color-primary;
-			padding: 35px;
-
-			.fa {
-				font-size: 50px;
-				color: rgba($color-primary, .4);
-
-				&.fa-quote-right {
-					display: block;
-					text-align: right;
-				}
-			}
-
-			p {
-				color: $color-light;
-				font-family: $font-primary;
-				font-size: 20px;
-			}
-
-			span {
-				color: $color-primary-dark;
-				display: block;
-				text-align: right;
-				font-size: 16px;
-			}
-		}
-	}
-
 	.section-skills {
 		padding: 60px 0;
-		background-color: $color-primary;
+		background-color: $color-light;
 
 		.skills-item {
 			text-align: center;
@@ -168,21 +132,21 @@
 			.fa {
 				text-shadow: 0 1px 2px $color-primary-dark;
 				font-size: 80px;
-				color: $color-light;
+				color: $color-primary;
 				margin-bottom: 30px;
 			}
 
 			p {
 				max-width: 80%;
 				margin: 0 auto;
-				color: $color-light;
+				color: $color-primary;
 			}
 		}
 	}
 
 	.section-portfolio {
 		padding: 60px 0;
-		background-color: $color-light;
+		background-color: $color-primary;
 
 		.portfolio-item {
 			position: relative;
@@ -233,6 +197,26 @@
 
 				.link-box {
 					@include transform(scale(1));
+				}
+			}
+		}
+
+		.owl-dots {
+
+			.owl-dot {
+
+				span {
+					@include transition(all ease .5s);
+
+					background-color: $color-light;
+				}
+
+				&.active {
+
+					span {
+						background-color: $color-secondary;
+						width: 20px;
+					}
 				}
 			}
 		}

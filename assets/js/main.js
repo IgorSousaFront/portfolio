@@ -45,7 +45,7 @@ var Portfolio = {
 		$('.portfolio-carousel').owlCarousel({
 			loop: false,
 			margin: 30,
-			autoplay: true,
+			autoplay: false,
 			autoplayTimeout: 5000,
 			dots: true,
 			nav: false,

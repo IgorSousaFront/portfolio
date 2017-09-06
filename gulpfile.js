@@ -10,7 +10,8 @@ reload      = sync.reload;
 
 gulp.task('serverRun', function() {
     sync.init({
-        proxy: "localhost/portfolio"
+        proxy: "localhost/portfolio",
+        port : "3002"
     });
 });
 
@@ -46,7 +47,6 @@ gulp.task('fileinclude', function() {
 
 gulp.task('images', function() {
   gulp.src('src/img/*.*')
-  .pipe(image())
   .pipe(gulp.dest('./assets/images/'));
 });
 
