@@ -47,6 +47,7 @@ gulp.task('fileinclude', function() {
 
 gulp.task('images', function() {
   gulp.src('src/img/*.*')
+  .pipe(image())
   .pipe(gulp.dest('./assets/images/'));
 });
 
